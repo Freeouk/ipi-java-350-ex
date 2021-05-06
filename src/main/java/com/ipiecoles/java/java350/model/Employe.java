@@ -16,6 +16,7 @@ public class Employe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    //point virgule ajouté pour que le test passe
     private String nom;
 
     private String prenom;
@@ -48,6 +49,9 @@ public class Employe {
      * @return
      */
     public Integer getNombreAnneeAnciennete() {
+        if(dateEmbauche == null || dateEmbauche.isAfter(LocalDate.now())){
+            return null;
+        }
         return LocalDate.now().getYear() - dateEmbauche.getYear();
     }
 

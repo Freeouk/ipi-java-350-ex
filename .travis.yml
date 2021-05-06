@@ -2,10 +2,10 @@ language: java
 
 addons:
   sonarcloud:
-    organization: "freeoukscompany"
-#    token:
-#      secure: "**************************" # encrypted value of your token
+    organization: "jesbelin"
+    #token:
+      #secure: "**************************" # encrypted value of your token
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ipi350ex
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Java-350
